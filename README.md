@@ -138,3 +138,18 @@ El servidor estará disponible en:
 - Tailwind CSS para estilos utility-first
 - TypeScript para type safety
 - Estructura limpia y escalable con Atomic Design
+- Route Groups para organización de rutas públicas/privadas
+- Componentes tipados con ejemplos (Button, Input)
+- Path aliases configurados para imports limpios
+
+## 🚀 Deployment
+
+El proyecto está desplegado en Vercel:
+
+**URL de Producción**: https://dashboard-kv01rmcwo-angolapas-projects.vercel.app/
+
+### Deployment Automático
+
+- Cada push a `main` → Deployment a producción
+- Cada PR → Preview deployment automático
+- Ver más detalles en [DEPLOYMENT.md](./DEPLOYMENT.md)
