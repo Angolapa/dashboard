@@ -75,12 +75,12 @@ Usa imports absolutos para mejorar la legibilidad:
 
 ```typescript
 // ❌ Imports relativos
-import Button from '../../../components/atoms/Button';
+import Button from "../../../components/atoms/Button";
 
 // ✅ Imports con alias
-import Button from '@/atoms/Button';
-import { User } from '@/types';
-import Layout from '@/templates/MainLayout';
+import Button from "@/atoms/Button";
+import { User } from "@/types";
+import Layout from "@/templates/MainLayout";
 ```
 
 Aliases disponibles:

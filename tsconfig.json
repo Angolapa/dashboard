@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -24,27 +20,13 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/atoms/*": [
-        "./src/components/atoms/*"
-      ],
-      "@/molecules/*": [
-        "./src/components/molecules/*"
-      ],
-      "@/organisms/*": [
-        "./src/components/organisms/*"
-      ],
-      "@/templates/*": [
-        "./src/components/templates/*"
-      ],
-      "@/app/*": [
-        "./app/*"
-      ]
+      "@/*": ["./*"],
+      "@/components/*": ["./src/components/*"],
+      "@/atoms/*": ["./src/components/atoms/*"],
+      "@/molecules/*": ["./src/components/molecules/*"],
+      "@/organisms/*": ["./src/components/organisms/*"],
+      "@/templates/*": ["./src/components/templates/*"],
+      "@/app/*": ["./app/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
@@ -59,9 +41,5 @@
     "**/*.mts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out"
-  ]
+  "exclude": ["node_modules", ".next", "out"]
 }

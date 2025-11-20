@@ -13,13 +13,13 @@ Carpeta para definir tipos y interfaces TypeScript globales.
 ## Uso:
 
 ```typescript
-import { User, ApiResponse } from '@/types';
+import { User, ApiResponse } from "@/types";
 
 const user: User = {
-  id: '1',
-  name: 'John Doe',
-  email: 'john@example.com',
-  role: 'admin',
+  id: "1",
+  name: "John Doe",
+  email: "john@example.com",
+  role: "admin",
 };
 ```
 

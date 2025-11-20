@@ -89,7 +89,7 @@ import Input from '@/atoms/Input';
 ## Usando Tipos
 
 ```tsx
-import { User, ApiResponse } from '@/types';
+import { User, ApiResponse } from "@/types";
 
 // Definir estado con tipos
 const [user, setUser] = useState<User | null>(null);

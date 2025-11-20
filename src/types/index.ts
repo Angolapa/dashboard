@@ -15,7 +15,7 @@ export interface User {
   role: UserRole;
 }
 
-export type UserRole = 'admin' | 'user' | 'guest';
+export type UserRole = "admin" | "user" | "guest";
 
 // Tipos para estadísticas del dashboard
 export interface DashboardStats {
@@ -27,7 +27,7 @@ export interface DashboardStats {
 // Tipos para actividad
 export interface Activity {
   id: string;
-  type: 'create' | 'update' | 'delete';
+  type: "create" | "update" | "delete";
   description: string;
   timestamp: Date;
   userId: string;
@@ -37,7 +37,7 @@ export interface Activity {
 export interface FormField {
   name: string;
   label: string;
-  type: 'text' | 'email' | 'password' | 'number' | 'select';
+  type: "text" | "email" | "password" | "number" | "select";
   required?: boolean;
   placeholder?: string;
 }

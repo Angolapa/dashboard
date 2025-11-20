@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function PrivateLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -9,12 +11,12 @@ export default function PrivateLayout({ children }: { children: React.ReactNode 
               <h1 className="text-xl font-bold text-gray-900">Dashboard App</h1>
             </div>
             <nav className="flex gap-4">
-              <a href="/" className="text-gray-600 hover:text-gray-900">
+              <Link href="/" className="text-gray-600 hover:text-gray-900">
                 Inicio
-              </a>
-              <a href="/dashboard" className="text-gray-600 hover:text-gray-900">
+              </Link>
+              <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">
                 Dashboard
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
