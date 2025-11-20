@@ -11,6 +11,7 @@
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
   // Files
+  "files.eol": "\n",
   "files.associations": {
     "*.css": "tailwindcss"
   },
