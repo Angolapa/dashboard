@@ -1,5 +1,5 @@
 # CodeRabbit Configuration
-# https://docs.coderabbit.ai/guides/configure-coderabbit
+# https://docs.coderabbit.ai/reference/configuration
 
 language: "es" # Reviews en español
 early_access: false
@@ -13,22 +13,22 @@ reviews:
   auto_review:
     enabled: true
     auto_incremental_review: true
+    base_branches:
+      - ".*" # Revisar TODAS las ramas, no solo main
     ignore_title_keywords:
       - "WIP"
       - "DO NOT REVIEW"
+  path_filters:
+    - "!**/*.md"
+    - "!**/*.lock"
+    - "!package-lock.json"
+    - "!yarn.lock"
+    - "!pnpm-lock.yaml"
+    - "!.next/**"
+    - "!node_modules/**"
+    - "!public/**"
+    - "!*.config.js"
+    - "!*.config.ts"
 
 chat:
   auto_reply: true
-
-# Archivos a ignorar en el review
-ignore:
-  - "**/*.md"
-  - "**/*.lock"
-  - "package-lock.json"
-  - "yarn.lock"
-  - "pnpm-lock.yaml"
-  - ".next/**"
-  - "node_modules/**"
-  - "public/**"
-  - "*.config.js"
-  - "*.config.ts"
