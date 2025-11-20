@@ -16,7 +16,8 @@ export default function Button({
   disabled,
   ...props
 }: ButtonProps) {
-  const baseStyles = 'font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseStyles =
+    'font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variantStyles = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
@@ -39,7 +40,7 @@ export default function Button({
     >
       {isLoading ? (
         <span className="flex items-center gap-2">
-          <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+          <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24">
             <circle
               className="opacity-25"
               cx="12"

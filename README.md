@@ -50,6 +50,7 @@ Este proyecto utiliza **Route Groups** de Next.js para organizar las rutas:
 - **`(private)/`**: Rutas que requieren autenticación (dashboard, perfil, settings)
 
 Los paréntesis crean grupos de rutas sin afectar la URL. Por ejemplo:
+
 - `app/(public)/page.tsx` → URL: `/`
 - `app/(private)/dashboard/page.tsx` → URL: `/dashboard`
 
@@ -83,6 +84,7 @@ import Layout from '@/templates/MainLayout';
 ```
 
 Aliases disponibles:
+
 - `@/*` - Raíz del proyecto
 - `@/components/*` - Carpeta de componentes
 - `@/atoms/*` - Componentes atómicos
@@ -95,8 +97,40 @@ Aliases disponibles:
 ### Componentes de ejemplo
 
 Incluye componentes tipados de ejemplo:
+
 - `Button.tsx` - Botón con variants y estados
 - `Input.tsx` - Input con labels y validación
+
+## Code Quality
+
+El proyecto tiene configurado ESLint + Prettier para mantener código limpio y consistente.
+
+### ESLint
+
+Configurado con ESLint 9 (flat config) con:
+
+- Reglas de Next.js
+- Reglas de TypeScript
+- Integración con Prettier
+- Variables no usadas permitidas con prefijo `_`
+
+### Prettier
+
+Configuración estándar con:
+
+- Semi: `true`
+- Single quotes: `true`
+- Print width: `100`
+- Tab width: `2`
+- **prettier-plugin-tailwindcss**: Ordena automáticamente las clases de Tailwind
+
+### VS Code
+
+Incluye configuración de VS Code (`.vscode/`):
+
+- Format on save activado
+- ESLint auto-fix on save
+- Extensiones recomendadas (ESLint, Prettier, Tailwind CSS IntelliSense)
 
 ## Comandos
 
@@ -112,6 +146,11 @@ npm start
 
 # Linter
 npm run lint
+npm run lint:fix  # Auto-fix de problemas
+
+# Formateo de código
+npm run format          # Formatear todo el código
+npm run format:check    # Solo verificar formato
 
 # Verificar tipos TypeScript
 npm run type-check
@@ -128,6 +167,7 @@ npm run dev
 Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
 El servidor estará disponible en:
+
 - Local: http://localhost:3000
 - Network: http://[tu-ip]:3000
 

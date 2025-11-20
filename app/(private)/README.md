@@ -18,6 +18,7 @@ Esta carpeta contiene todas las rutas que requieren autenticación.
 ## Layout
 
 El `layout.tsx` en esta carpeta incluye:
+
 - Header con navegación
 - Logo/título de la aplicación
 - Links de navegación compartidos
