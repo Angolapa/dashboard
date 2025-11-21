@@ -1,1 +1,2 @@
 // Exportar componentes organismos
+export {};
