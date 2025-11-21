@@ -26,14 +26,11 @@ dashboard-app/
 │   └── globals.css              # Estilos globales + Tailwind
 │
 ├── src/
-│   ├── components/              # Componentes organizados con Atomic Design
-│   │   ├── atoms/               # Componentes básicos (Button, Input, Text)
-│   │   ├── molecules/           # Combinaciones simples (SearchBar, Card)
-│   │   ├── organisms/           # Secciones complejas (Header, Footer)
-│   │   └── templates/           # Layouts de páginas
-│   │
-│   └── types/                   # Tipos TypeScript globales
-│       └── index.ts             # Definiciones de tipos
+│   └── components/              # Componentes organizados con Atomic Design
+│       ├── atoms/               # Componentes básicos (AtImput, AtText)
+│       ├── molecules/           # Combinaciones simples (SearchBar, Card)
+│       ├── organisms/           # Secciones complejas (Header, Footer)
+│       └── templates/           # Layouts de páginas
 │
 ├── public/                      # Archivos estáticos
 ├── tailwind.config.ts           # Configuración de Tailwind
@@ -75,11 +72,10 @@ Usa imports absolutos para mejorar la legibilidad:
 
 ```typescript
 // ❌ Imports relativos
-import Button from "../../../components/atoms/Button";
+import { AtImput } from "../../../components/atoms/at-imput";
 
 // ✅ Imports con alias
-import Button from "@/atoms/Button";
-import { User } from "@/types";
+import { AtImput, AtText } from "@/components";
 import Layout from "@/templates/MainLayout";
 ```
 
@@ -91,15 +87,14 @@ Aliases disponibles:
 - `@/molecules/*` - Componentes moleculares
 - `@/organisms/*` - Componentes organísmicos
 - `@/templates/*` - Templates
-- `@/types/*` - Tipos TypeScript
 - `@/app/*` - Carpeta app
 
-### Componentes de ejemplo
+### Componentes
 
-Incluye componentes tipados de ejemplo:
+Los tipos TypeScript se definen dentro de cada componente atómico para mantener cohesión:
 
-- `Button.tsx` - Botón con variants y estados
-- `Input.tsx` - Input con labels y validación
+- `AtImput` - Input con labels, validación y variants
+- `AtText` - Texto tipográfico con soporte para tamaños, pesos y elementos HTML
 
 ## Code Quality
 
@@ -179,8 +174,9 @@ El servidor estará disponible en:
 - TypeScript para type safety
 - Estructura limpia y escalable con Atomic Design
 - Route Groups para organización de rutas públicas/privadas
-- Componentes tipados con ejemplos (Button, Input)
+- Componentes atómicos reutilizables (AtImput, AtText)
 - Path aliases configurados para imports limpios
+- ESLint + Prettier con auto-format configurado
 
 ## 🚀 Deployment
 
