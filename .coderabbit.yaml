@@ -10,6 +10,9 @@ reviews:
   poem: false
   review_status: true
   collapse_walkthrough: false
+  checks:
+    docstring_coverage:
+      mode: off # Desactivar verificación de docstrings
   auto_review:
     enabled: true
     auto_incremental_review: true
